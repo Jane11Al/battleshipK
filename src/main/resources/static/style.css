@@ -189,6 +189,13 @@ body {
     margin: 0 auto;
 }
 
+.login-card form {
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .input-label {
     display: block;
     margin: 4px 0 6px;
@@ -269,6 +276,65 @@ body {
     transform: scale(1.03);
 }
 
+.login-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: rgba(220, 190, 255, 0.7);
+    border-radius: 15px;
+    padding: 35px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.login-card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.btn-login {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 12px auto 24px;
+    padding: 14px 20px;
+    background-color: rgba(220, 190, 255, 0.6);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    backdrop-filter: blur(4px);
+}
+
+.btn-login:hover {
+    background-color: rgba(220, 190, 255, 0.8);
+    transform: scale(1.03);
+}
+
+.input-label {
+    display: block;
+    margin: 4px 0 6px;
+    font-size: 1.1em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 600px) {
     .main-content h1 {
@@ -343,5 +409,32 @@ body {
         margin: 6px 0;
         font-size: 1em;
         padding: 10px 14px;
+    }
+    .login-card {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .login-card h2 {
+        font-size: 2rem;
+    }
+    .input-field {
+        font-size: 1em;
+        padding: 10px 14px;
+    }
+    .btn-login {
+        margin: 12px auto 20px;
+        font-size: 1.1em;
+        padding: 12px 20px;
+        max-width: 260px;
+        background-color: rgba(220, 190, 255, 0.6);
+        color: white;
+    }
+    .btn-login:hover {
+        background-color: rgba(220, 190, 255, 0.8);
+    }
+    .login-card form {
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
     }
 }
