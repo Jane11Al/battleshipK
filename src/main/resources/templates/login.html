@@ -3,35 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход - Морской бой</title>
+    <title>Авторизация</title>
     <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>⚓ Морской Бой</h1>
-    </div>
 
-    <div class="content">
-        <h2>Вход в игру</h2>
-        <p>Введите ваши учетные данные</p>
-
+<div class="login-container">
+    <div class="login-card">
+        <h2>Авторизация</h2>
         <form th:action="@{/login}" method="post">
-            <div class="form-group">
-                <label for="username">Логин:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
+            <label for="username" class="input-label">Логин</label>
+            <input type="text" id="username" name="username" placeholder="Введите логин" required class="input-field">
 
-            <div class="form-group">
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+            <label for="password" class="input-label">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required class="input-field">
 
-            <button type="submit" class="btn">Войти</button>
+            <button type="submit" class="btn-login">Авторизация</button>
         </form>
-
-        <a th:href="@{/}" class="btn btn-back">Назад</a>
+        <a th:href="@{/}" class="btn-back">Назад</a>
     </div>
 </div>
+
 </body>
 </html>
