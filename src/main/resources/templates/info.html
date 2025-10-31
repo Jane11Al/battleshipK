@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об игре</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
+
+<div class="info-container">
+    <div class="info-card">
+        <h2>Об игре</h2>
+        <div class="info-text">
+            Цель игры «Морской бой» — уничтожить все корабли противника быстрее, чем он уничтожит ваши. Вы можете самостоятельно расставить свои десять кораблей в любом месте игрового поля.<br><br>
+            Игра была разработана Алиевой Ж.М., Рассказовой А.С., Шевляковой Д.Н.
+        </div>
+        <a th:href="@{/}" class="btn-menu">Меню</a>
+    </div>
+</div>
 
 </body>
 </html>
