@@ -3,63 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Морской бой - Главная</title>
+    <title>Морской бой</title>
     <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>⚓ Морской Бой</h1>
-        <div class="subtitle">Классическая стратегическая игра</div>
-    </div>
 
-    <div class="content">
-        <div class="welcome-section">
-            <h2>Добро пожаловать на поле боя!</h2>
-            <p>Приготовьтесь к захватывающему морскому сражению. Разместите свои корабли и потопите флот противника!</p>
-        </div>
+<div class="main-content">
+    <h1>Морской бой</h1>
 
-        <div class="action-buttons">
-            <a th:href="@{/login}" class="btn btn-primary">
-                <span class="btn-icon">🚪</span>
-                Войти в игру
-            </a>
-
-            <a th:href="@{/register}" class="btn btn-success">
-                <span class="btn-icon">📝</span>
-                Зарегистрироваться
-            </a>
-
-            <a th:href="@{/info}" class="btn btn-info">
-                <span class="btn-icon">📖</span>
-                Об игре
-            </a>
-        </div>
-
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Стратегия</h3>
-                <p>Разрабатывайте тактику и предугадывайте ходы противника</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Динамика</h3>
-                <p>Быстрые партии и напряженные морские баталии</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <h3>Победа</h3>
-                <p>Станьте адмиралом и потопите весь вражеский флот</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Морской бой © 2024 | Классическая игра для настоящих стратегов</p>
+    <div class="button-group">
+        <a th:href="@{/register}" class="btn">Регистрация</a>
+        <a th:href="@{/login}" class="btn">Войти в аккаунт</a>
     </div>
 </div>
+
+<a th:href="@{/info}" class="btn-info-corner">Об игре</a>
 </body>
 </html>
