@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Об игре</title>
     <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{/server-test.css}">
 </head>
 <body>
 
@@ -12,12 +13,78 @@
     <div class="info-card">
         <h2>Об игре</h2>
         <div class="info-text">
-            Цель игры «Морской бой» — уничтожить все корабли противника быстрее, чем он уничтожит ваши. Вы можете самостоятельно расставить свои десять кораблей в любом месте игрового поля.<br><br>
+            Цель игры «Морской бой» — уничтожить все корабли противника быстрее, чем он уничтожит ваши. Вы можете самостоятельно расставить свои десять корабли в любом месте игрового поля.<br><br>
             Игра была разработана Алиевой Ж.М., Рассказовой А.С., Шевляковой Д.Н.
         </div>
+
+        <!-- Секция тестирования сервера -->
+        <div class="server-test-section">
+            <h3>🛜 Тестирование связи с сервером
+                <span id="connectionStatus" class="connection-status disconnected">Не подключено</span>
+            </h3>
+
+            <div class="server-config">
+                <span class="config-label">Сервер:</span>
+                <input type="text"
+                       class="config-input"
+                       id="serverHost"
+                       value="localhost"
+                       placeholder="localhost">
+                <span class="config-label">Порт:</span>
+                <input type="number"
+                       class="config-input"
+                       id="serverPort"
+                       value="8080"
+                       placeholder="8080">
+                <button class="test-btn" id="testConnectionBtn" type="button">
+                    🔗 Проверить подключение
+                </button>
+            </div>
+
+            <!-- Блок помощи - скрыт по умолчанию -->
+            <div class="connection-help" id="connectionHelp" style="display: none;">
+                <p>⚠️ <strong>Возможные причины проблем с подключением:</strong></p>
+                <ul>
+                    <li>Сервер не запущен на указанном порту</li>
+                    <li>Неверный адрес или порт сервера</li>
+                    <li>Проблемы с CORS настройками сервера</li>
+                    <li>Сетевые ограничения или брандмауэр</li>
+                    <li>Сервер перезагружается или недоступен</li>
+                </ul>
+            </div>
+
+            <p>Проверьте работу сервера, отправив сообщение:</p>
+
+            <div class="test-controls">
+                <input type="text"
+                       class="message-input"
+                       id="userMessage"
+                       placeholder="Введите ваше сообщение (необязательно)..."
+                       maxlength="100">
+                <button class="test-btn" id="sendBtn" type="button" disabled>
+                    📨 Отправить на сервер
+                </button>
+                <button class="test-btn" id="simpleBtn" type="button" disabled>
+                    🚀 Простой запрос
+                </button>
+                <button class="test-btn" id="countBtn" type="button" disabled>
+                    🔢 Получить счётчик
+                </button>
+            </div>
+
+            <div class="response-area" id="responseArea">
+                <div class="response-text" id="responseText">
+                    Сначала проверьте подключение к серверу...
+                </div>
+                <div class="status-info" id="statusInfo"></div>
+                <div class="error-details" id="errorDetails" style="display: none;"></div>
+            </div>
+        </div>
+
         <a th:href="@{/}" class="btn-menu">Меню</a>
     </div>
 </div>
 
+<script th:src="@{/server-test.js}"></script>
 </body>
 </html>
